@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+/* Universal High-Contrast Form Controls (Pure Solid Black Typing Text & 100% Solid Black Placeholders - NO GRAY) */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+textarea,
+select {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  -webkit-text-fill-color: #000000 !important;
+  font-weight: 700 !important;
+  border: 2px solid #334155 !important;
+  caret-color: #000000 !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"])::placeholder,
+textarea::placeholder {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+::-webkit-input-placeholder {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+:-moz-placeholder {
+  color: #000000 !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+::-moz-placeholder {
+  color: #000000 !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+:-ms-input-placeholder {
+  color: #000000 !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+textarea:focus,
+select:focus {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  -webkit-text-fill-color: #000000 !important;
+  border-color: #0284c7 !important;
+  outline: 2px solid #0284c7 !important;
+  outline-offset: 1px !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.3) !important;
+}
+
+option {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Glassmorphism & Luxury Automotive Visual Styles */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.35);
+}
+
+/* Micro-Interactions & Hardware-Accelerated Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-scale-in,
+  .animate-fade-in-up,
+  .animate-pulse-glow {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
