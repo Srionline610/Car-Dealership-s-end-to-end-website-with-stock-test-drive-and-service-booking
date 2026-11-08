@@ -1,0 +1,19 @@
+{
+  "name": "companya-brandx-dealership-platform",
+  "version": "1.0.0",
+  "description": "Company A Brand X Dealership Platform (Lucknow)",
+  "scripts": {
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "start": "node server/index.js",
+    "build:client": "cd client && npm run build",
+    "dev:server": "cd server && node --watch index.js",
+    "dev:client": "cd client && npm run dev"
+  },
+  "keywords": [
+    "dealership",
+    "car-portal",
+    "lucknow"
+  ],
+  "author": "Company A Automotive",
+  "license": "ISC"
+}
